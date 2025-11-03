@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/firestone/firestone.component.css"],
-  "sourcesContent": ["body {\r\n  font-family: \"Noto Sans TC\", \"Microsoft JhengHei\", sans-serif;\r\n}\r\n\r\n.btn-area {\r\n  text-align: left; /* \u6539\u6210 left / center / right \u90FD\u53EF\u4EE5 */\r\n  margin: 20px 10%;\r\n}\r\n\r\n.btn-area button {\r\n  padding: 10px 20px;\r\n  border-radius: 6px;\r\n}\r\n.mat-only {\r\n  all: unset;\r\n  display: inline-block;\r\n  border-radius: 4px;\r\n  background-color: var(--mdc-protected-button-container-color, #1976d2);\r\n  color: white;\r\n  padding: 6px 16px;\r\n  cursor: pointer;\r\n  box-shadow: 0 2px 4px rgba(0,0,0,0.2);\r\n}\r\n\r\n.short-field {\r\n  width: 200px;\r\n}\r\n.medium-field {\r\n  width: 350px;\r\n}\r\n.full-field {\r\n  width: 100%;\r\n}\r\n"],
-  "mappings": ";AAAA;AACE;AAAA,IAAa,cAAc;AAAA,IAAE,oBAAoB;AAAA,IAAE;AACrD;AAEA,CAAC;AACC,cAAY;AACZ,UAAQ,KAAK;AACf;AAEA,CALC,SAKS;AACR,WAAS,KAAK;AACd,iBAAe;AACjB;AACA,CAAC;AACC,OAAK;AACL,WAAS;AACT,iBAAe;AACf,oBAAkB,IAAI,sCAAsC,EAAE;AAC9D,SAAO;AACP,WAAS,IAAI;AACb,UAAQ;AACR,cAAY,EAAE,IAAI,IAAI,KAAK,CAAC,EAAC,CAAC,EAAC,CAAC,EAAC;AACnC;AAEA,CAAC;AACC,SAAO;AACT;AACA,CAAC;AACC,SAAO;AACT;AACA,CAAC;AACC,SAAO;AACT;",
-  "names": []
-}
