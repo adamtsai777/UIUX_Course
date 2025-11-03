@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/home/home.component.css"],
+  "sourcesContent": ["body {\r\n  font-family: \"Noto Sans TC\", \"Microsoft JhengHei\", sans-serif;\r\n}\r\n"],
+  "mappings": ";AAAA;AACE;AAAA,IAAa,cAAc;AAAA,IAAE,oBAAoB;AAAA,IAAE;AACrD;",
+  "names": []
+}
