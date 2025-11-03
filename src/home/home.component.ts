@@ -14,7 +14,7 @@ import {MatFormField, MatLabel} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import Fuse from 'fuse.js';
+import Fuse from 'fuse.js'; //模糊搜尋
 
 @Component({
   selector: 'app-home',
@@ -76,7 +76,7 @@ async ngOnInit() {
       // 初始化 Fuse.js
       this.fuse = new Fuse(data, {
         keys: ['courseName', 'instructor', 'description'],
-        threshold: 0.4,
+        threshold: 0.6,
         includeScore: true,
       });
       this.coursesSource.next(data);
