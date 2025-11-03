@@ -1,0 +1,8 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+.btn-warn {
+  background-color: #d32f2f !important; /* Material warn 紅 */
+  color: #fff !important;
+}
+.btn-warn:hover {
+  background-color: #b71c1c !important;
+}

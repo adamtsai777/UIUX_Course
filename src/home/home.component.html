@@ -1,0 +1,104 @@
+<div style="margin: 10px 0;">
+  <button mat-raised-button color="primary" style="margin-left: 10%;" (click)="btnCourse()">
+    課程設定
+  </button>
+  <button mat-raised-button color="accent" style="margin-left: 10%;" (click)="btnImport()">
+    課程匯入
+  </button>
+</div>
+
+<mat-card>
+  <mat-card-title>智慧模糊搜尋課程</mat-card-title>
+  <mat-card-content>
+
+    <!-- 🔍 搜尋欄 -->
+    <mat-form-field appearance="outline" style="width:100%;">
+      <mat-label>關鍵字</mat-label>
+      <input
+        matInput
+        placeholder="例如：資料庫、王老師、資管系"
+        (input)="searchCourses($event.target.value)"
+      />
+    </mat-form-field>
+
+    <h3>📘 課程列表</h3>
+
+    <!-- 🧾 課程表格 -->
+    <table
+      mat-table
+      [dataSource]="(courses$ | async) || []"
+      class="mat-elevation-z8"
+      style="width:100%; margin-top:10px;"
+    >
+      <!-- 課程代碼 -->
+      <ng-container matColumnDef="courseId">
+        <th mat-header-cell *matHeaderCellDef> 課程代碼 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.courseId }} </td>
+      </ng-container>
+
+      <!-- 課程名稱 -->
+      <ng-container matColumnDef="courseName">
+        <th mat-header-cell *matHeaderCellDef> 課程名稱 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.courseName }} </td>
+      </ng-container>
+
+      <!-- 課程類別 -->
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef> 課程類別 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.category }} </td>
+      </ng-container>
+
+      <!-- 授課教師 -->
+      <ng-container matColumnDef="instructor">
+        <th mat-header-cell *matHeaderCellDef> 授課教師 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.instructor }} </td>
+      </ng-container>
+
+      <!-- 開課系所 -->
+      <ng-container matColumnDef="department">
+        <th mat-header-cell *matHeaderCellDef> 開課系所 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.department }} </td>
+      </ng-container>
+
+      <!-- 學分 -->
+      <ng-container matColumnDef="credit">
+        <th mat-header-cell *matHeaderCellDef> 學分 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.credit }} </td>
+      </ng-container>
+
+      <!-- 節次 -->
+      <ng-container matColumnDef="week">
+        <th mat-header-cell *matHeaderCellDef> 節次 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.week }} </td>
+      </ng-container>
+
+      <!-- 時間 -->
+      <ng-container matColumnDef="coursetime">
+        <th mat-header-cell *matHeaderCellDef> 時間 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.coursetime }} </td>
+      </ng-container>
+
+      <!-- 教室 -->
+      <ng-container matColumnDef="room">
+        <th mat-header-cell *matHeaderCellDef> 教室 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.room }} </td>
+      </ng-container>
+
+      <!-- 學制 -->
+      <ng-container matColumnDef="schoolsystem">
+        <th mat-header-cell *matHeaderCellDef> 學制 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.schoolsystem }} </td>
+      </ng-container>
+
+      <!-- 課程描述
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> 課程描述 </th>
+        <td mat-cell *matCellDef="let element"> {{ element.description }} </td>
+      </ng-container> -->
+
+      <!-- Header & Row -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>

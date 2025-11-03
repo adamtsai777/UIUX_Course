@@ -1,0 +1,166 @@
+<mat-card>
+  <mat-card-title>新增課程</mat-card-title>
+  <mat-card-content>
+    <table class="mat-form-table">
+      <tr>
+        <td><b>課程代碼</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>課程代碼</mat-label>
+            <input matInput [(ngModel)]="strcourseId" />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>課程名稱</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>課程名稱</mat-label>
+            <input matInput [(ngModel)]="strcourseName" />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>課程類別</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>課程類別</mat-label>
+            <mat-select [(ngModel)]="strcategory">
+              <mat-option value="必修">必修</mat-option>
+              <mat-option value="選修">選修</mat-option>
+              <mat-option value="通識">通識</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>學分</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>學分</mat-label>
+            <input matInput [(ngModel)]="strcredit" />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>開課系所</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>開課系所</mat-label>
+            <input matInput [(ngModel)]="strdepartment" />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>授課教師</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>授課教師</mat-label>
+            <input matInput [(ngModel)]="strinstructor" />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>時間</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>時間</mat-label>
+            <mat-select [(ngModel)]="strweek">
+              <mat-option value="周一">周一</mat-option>
+              <mat-option value="周二">周二</mat-option>
+              <mat-option value="周三">周三</mat-option>
+              <mat-option value="週四">週四</mat-option>
+              <mat-option value="週五">週五</mat-option>
+              <mat-option value="週六">週六</mat-option>
+              <mat-option value="週日">週日</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>教室</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>教室</mat-label>
+            <input matInput [(ngModel)]="strroom" />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>節次</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>節次</mat-label>
+            <input matInput [(ngModel)]="strcoursetime" />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>課程說明</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>課程說明</mat-label>
+            <textarea matInput rows="3" [(ngModel)]="strdescription"></textarea>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>修課人數上限</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>上限人數</mat-label>
+            <input matInput [(ngModel)]="strmaxStudents" />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>目前已選人數</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>已選人數</mat-label>
+            <input matInput [(ngModel)]="strenrolled" />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>上課時段與教室資訊</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>時段與教室</mat-label>
+            <input matInput [(ngModel)]="strschedule" />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>學制</b></td>
+        <td>
+          <mat-form-field appearance="outline" class="medium-field">
+            <mat-label>學制</mat-label>
+            <mat-select [(ngModel)]="strschoolsystem">
+              <mat-option value="大學部">大學部</mat-option>
+              <mat-option value="碩士班">碩士班</mat-option>
+              <mat-option value="碩士在職專班">碩士在職專班</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <div style="margin-top: 20px; text-align: center;">
+      <button mat-raised-button color="primary" (click)="btnAdd()">新增課程</button>
+    </div>
+  </mat-card-content>
+</mat-card>

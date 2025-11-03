@@ -1,0 +1,26 @@
+<h3>📥 匯入課程 Excel</h3>
+
+<!-- <input MatInput type="file" (change)="onFileChange($event)" accept=".xlsx, .xls" /> -->
+
+<!-- <table *ngIf="data.length" border="1" style="margin-top: 20px;">
+  <tr>
+    <th *ngFor="let key of data[0] | keyvalue">{{ key.key }}</th>
+  </tr>
+  <tr *ngFor="let row of data">
+    <td *ngFor="let value of row | keyvalue">{{ value.value }}</td>
+  </tr>
+</table> -->
+
+<mat-form-field appearance="fill" style="width:100%">
+  <mat-label>匯入課程 Excel 檔案</mat-label>
+  <input
+    type="file"
+    (change)="onFileChange($event)"
+    accept=".xlsx, .xls"
+    style="padding: 8px 0"
+  />
+</mat-form-field>
+
+<div style="margin-top: 20px; text-align: left;">
+  <button mat-raised-button color="btn-warn" (click)="closeDialog()">關閉</button>
+</div>

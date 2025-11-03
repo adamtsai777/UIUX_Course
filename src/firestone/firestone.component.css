@@ -1,0 +1,33 @@
+body {
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+
+.btn-area {
+  text-align: left; /* 改成 left / center / right 都可以 */
+  margin: 20px 10%;
+}
+
+.btn-area button {
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+.mat-only {
+  all: unset;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--mdc-protected-button-container-color, #1976d2);
+  color: white;
+  padding: 6px 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.short-field {
+  width: 200px;
+}
+.medium-field {
+  width: 350px;
+}
+.full-field {
+  width: 100%;
+}
